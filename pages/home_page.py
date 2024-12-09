@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from utilities.ui_actions import UiActions
@@ -11,9 +13,9 @@ class HomePage(UiActions):
         self.wait = WebDriverWait(driver, 10)
 
     # Locators
-    img_logo = (By.CLASS_NAME, "logo.img-responsive")
-    url_homePage = "http://www.automationpractice.pl/index.php"
-    btn_singIn = (By.CLASS_NAME, "login")
+    img_logo = (By.CSS_SELECTOR, "img[src='/images/Toolsqa.jpg']")
+    url_homePage = "https://demoqa.com/books"
+    btn_singIn = (By.ID, "login")
 
     # Actions
     def navi_to_homepage(self):
@@ -25,5 +27,3 @@ class HomePage(UiActions):
     def navi_to_login(self):
         self.navi_to_homepage()
         self.click_action(self.btn_singIn)
-
-

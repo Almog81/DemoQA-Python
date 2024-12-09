@@ -8,9 +8,5 @@ class TestSanityScenarios:
 
     def test_login_action(self, pages):
         pages.home_page.navi_to_login()
-        pages.login_page.login_action("user4Test@example.com", "userPassword")
-        assert pages.login_page.get_user_name() == "Sam One", "Login fails"
-
-    def test_create_user(self, pages):
-        pages.home_page.navi_to_login()
-        pages.create_user_page.create_user_action("user4Test2323@example.com", "John", "Doe", "123456", "1", "January", "2000")
+        pages.login_page.login_action("user4Test", "!@userPassword1234")
+        assert pages.login_page.get_user_name() == "user4Test", "Login fails"
