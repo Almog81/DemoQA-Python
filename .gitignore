@@ -1,3 +1,13 @@
 .idea/
 .idea/inspectionProfiles
+.vscode/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Selenium logs
+geckodriver.log
 
